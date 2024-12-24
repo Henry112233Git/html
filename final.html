@@ -1,0 +1,295 @@
+<html>
+  <head>
+    <title>明新資管網頁</title>
+    <!--外部內容-->
+    <link href="https://cdn.bootcss.com/flexslider/2.6.3/flexslider.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/flexslider/2.6.3/jquery.flexslider-min.js"></script>        
+    <script>
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                rtl: true
+            });
+        });
+    </script>
+    <style>
+      body {
+        margin: 0px;
+        white-space: nowrap;
+      }
+      .top {
+        height: 100px;
+        display: flex; /* 用彈性的方式 */
+        justify-content: space-between; /* 將區塊裡面的內容區隔 */
+        align-items: center;
+        background-color: white;
+        vertical-align: middle;
+      }
+      .top .logo { /* 左方 */
+        /*border:1px solid red;*/
+        font-size: 35px;
+        font-weight: bold;
+        /* border: 1px rebeccapurple solid; */
+      }
+      .top .logo img {
+        width: 100px; /* 控制圖片 */
+        vertical-align: middle; /* 垂直置中 */
+      }
+      .top .top-nav { /* 右邊 */
+        font-size: 25px;
+        font-weight: bold;
+        /* border: 1px rebeccapurple solid; */
+      }
+      .top .top-nav a {
+        text-decoration: none; /* 超連結未有底線 */
+        font-weight: bold;
+      }
+      .top .top-nav a:visited { /* 已按過的超連結之變化 */
+        color: gray;
+      }
+      .nav {
+        height: 50px;
+        display: flex;
+        text-align: center;
+        justify-content: center; /* 水平置中 */
+        align-items: center; /* 垂直置中 */
+        background-color: #333;
+      }
+      .nav ul {
+        list-style-type: none; /* 不顯示標籤 */
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* 隱藏超過區塊邊界 */
+        background-color: #333;
+      }
+      .nav li {
+        float: left; /* 列表改為橫向，向左靠齊 */
+      }
+      .nav li a {
+        display: block;
+        color: white;
+        text-align: center; /* 字體置中 */
+        padding: 14px 16px; /* 設定距離 */
+        text-decoration: none; /* 移除超連結底線 */
+      }
+      .nav li a:hover { /* 滑鼠拖曳至超連結所顯示的顏色 */
+        background-color: #555;
+      }
+      /* 圖片輪播當中，不要列入｢.slider｣裡面的程式，不然會有干擾 */
+      .slider {
+        /*height: 100px;*/ /* 註解移除 */
+        /*display: flex;*/ /* 註解移除 */
+        /*text-align: center;*/ /* 註解移除 */
+        /*justify-content: center;*/ /* 水平置中 */ /* 註解移除 */
+        /*align-items: center;*/ /* 垂直置中 */ /* 註解移除 */
+        /*background-color: blueviolet;*/ /* 註解移除 */
+      }
+      .banner {
+        /* height: 100px; */
+        /* display: flex; */
+        /* text-align: center; */
+        justify-content: center; /* 水平置中 */
+        align-items: center; /* 垂直置中 */
+        /* background-color: yellowgreen; */
+        background-image: linear-gradient(#ABDCFF,#0396FF);
+        padding: 30px;
+        text-align:center;
+        color: gray;
+      }
+      .banner h1 h3{
+        padding: 20px;
+      }
+      .faculty {
+        /* height: 100px; */
+        /* display: flex; */
+        text-align: center;
+        justify-content: center; /* 水平置中 */
+        align-items: center; /* 垂直置中 */
+        /* background-color: blueviolet; */
+      }
+      .container {
+        /*border:1px solid red;*/
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .faculty .teacher{
+        /*border:1px solid blue;*/
+        display:block;
+        text-decoration: none;
+      }
+      .faculty .teacher img{
+        height: 200px;
+        width: 200px;
+      }
+      .contact {
+        /*height: 100px;*/
+        /*display: flex;*/
+        /*text-align: center;*/
+        /*justify-content: center;*/ /* 水平置中 */
+        /*align-items: center;*/ /* 垂直置中 */
+        /*background-color: yellowgreen;*/
+      }
+      .footer {
+        /*height: 100px;*/
+        /*display: flex;*/
+        /*text-align: center;*/
+        /*justify-content: center;*/ /* 水平置中 */
+        /*align-items: center;*/ /* 垂直置中 */
+        /*background-color: blueviolet;*/
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;   /*使用block呈現上下排列*/
+      }
+      li.dropdown:hover{
+        background-color: #333;  /*設定背景顏色*/
+      }
+      .dropdown-content {  /*設定下拉選單內容格式*/
+        display: none;
+        position: absolute;
+        background-color: #333;
+        min-width: 160px;
+        z-index: 1;
+      }
+      .dropdown-content a {/*設定下拉選單連結內容格式*/
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      .contact {
+    display: block;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;                
+}
+.contact h2{
+    color: rgb(54, 82, 110);
+    font-size: 25px;
+    text-align: center;
+}
+.contact .infos{
+    display:flex;
+    margin-top: 30px; 
+    justify-content: center;
+}
+.contact .infos .left{
+    display:block;
+    text-align: left;
+    margin-right: 30px;
+}
+.contact .infos .left b{
+    display:block;
+    text-align: left;
+    margin-top: 10px;
+    text-decoration: bold;
+    color: Gray;
+    font-size: 18px;
+    line-height: 18px;
+}
+.contact .infos .left span{
+    display:block;
+    text-align: left;
+    margin-top: 10px;
+    color: rgba(39,40,34,0.5);
+    font-size: 16px;
+    padding-left: 27px;
+}
+.contact .infos .right{
+    height: 200px;               
+}
+.contact .infos .right iframe{
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(39,40,34,0.50);
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(25,26,30);
+    padding: 30px 0;
+}
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <div class="logo">
+        <img
+          src="https://github.com/shhuangmust/html/raw/111-1/IMMUST_LOGO.JPG"
+        />
+        明新資管系
+      </div>
+      <div class="top-nav">
+        <a href="https://www.must.edu.tw/">明新</a>
+        <a href="https://acade.must.edu.tw/index.aspx?UnitID=45">管理學院</a>
+        <a href="#">登入</a>
+      </div>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="#">首頁</a></li>
+        <li><a href="#introduction">系所簡介</a></li>
+        <li  class="dropdown"><a href="#faculty">成員簡介</a>
+          <div class="dropdown-content">
+              <a href="#faculty">黃老師</a>
+              <a href="#faculty">李老師</a>
+              <a href="#faculty">應老師</a>
+          </div>                       
+        </li>
+        <li><a href="#about">相關資訊</a></li>
+        <li><a href="../網站設計/HTML/臨時網站.html">進入臨時網站</a></li>
+      </ul>
+    </div>
+    <div class="slider">
+      <div class="flexslider">
+          <ul class="slides">
+              <li><img src="https://github.com/shhuangmust/html/raw/master/slider1.JPG" /></li>
+              <li><img src="https://github.com/shhuangmust/html/raw/master/slider2.JPG" /></li>
+              <li><img src="https://github.com/shhuangmust/html/raw/master/slider3.JPG" /></li>
+          </ul>
+      </div>
+    </div>
+    <div class="banner" id="introduction">
+      <h1>系所簡介</h1>
+      <h3>目前暫未提供資訊，謝謝</h3>
+    </div>
+    <div class="faculty" id="faculty">
+      <h2>師資介紹</h2>
+      <div class="container">
+          <a class="teacher" href="">
+              <img src="https://github.com/shhuangmust/html/raw/master/faculty1.jpg" />
+              <h3>黃老師</h3>
+          </a>
+          <a class="teacher" href="">
+              <img src="https://github.com/shhuangmust/html/raw/master/faculty2.jpg" />
+              <h3>李老師</h3>
+         </a>
+         <a class="teacher" href="">
+             <img src="https://github.com/shhuangmust/html/raw/master/faculty3.jpg" />
+             <h3>應老師</h3>
+         </a>        
+      </div>
+  </div>
+  <div class="contact" id="about">
+    <h2>聯絡資訊</h2>
+    <div class="infos">
+      <div class="left">
+        <b>明新科技大學管理學院大樓二樓</b>
+        <span>304新竹縣新豐鄉新興路1號</span>
+        <b> 電話:03-5593142</b>
+        <span>分機:3431、3432、3433</span>
+        <b> 傳真:03-5593142</b>
+        <span>分機:3440</span>
+      </div>
+      <div class="right">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28957.57774046163!2d120.979456!3d24.8741888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1szh-TW!2stw!4v1734141289856!5m2!1szh-TW!2stw" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <font color="white">&copy;Copyright 2024 Department of Information Management, MUST. All rights reserved. 楊裕鴻 Henry Yang</font>
+ </div>
+  </body>
+</html>
